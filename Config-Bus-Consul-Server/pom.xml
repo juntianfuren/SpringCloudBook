@@ -3,12 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.jtfr</groupId>
-	<artifactId>Chapter08-Feign-Hystrix-Consumer</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>Config-Bus-Consul-Server</artifactId>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
-	<name>Chapter08-Feign-Hystrix-Consumer</name>
-	<url>http://maven.apache.org</url>
+	<name>Config-Bus-Consul-Server</name>
 
 	<properties>
 		<spring.boot.version>2.2.4.RELEASE</spring.boot.version>
@@ -51,16 +50,10 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<!-- 引入 Spring Cloud Alibaba Nacos Discovery 相关依赖，将 Nacos 作为注册中心，并实现对其的自动配置 -->
-		<dependency>
-			<groupId>com.alibaba.cloud</groupId>
-			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-		</dependency>
-
-		<!-- 引入 Spring Cloud OpenFeign 相关依赖，使用 OpenFeign 提供声明式调用，并实现对其的自动配置 -->
+		<!-- 引入 Spring Cloud Sleuth 相关依赖，实现对它们的自动配置，从而实现链路追踪 -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
+			<artifactId>spring-cloud-starter-zipkin</artifactId>
 		</dependency>
 	</dependencies>
 	<build>

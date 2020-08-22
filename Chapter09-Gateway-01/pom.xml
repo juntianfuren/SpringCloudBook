@@ -3,12 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.jtfr</groupId>
-	<artifactId>Chapter08-Feign-Hystrix-Consumer</artifactId>
+	<artifactId>Chapter09-Gateway-01</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>Chapter08-Feign-Hystrix-Consumer</name>
-	<url>http://maven.apache.org</url>
+	<name>Chapter09-Gateway-01</name>
 
 	<properties>
 		<spring.boot.version>2.2.4.RELEASE</spring.boot.version>
@@ -45,22 +44,10 @@
 	</dependencyManagement>
 
 	<dependencies>
-		<!-- 引入 SpringMVC 相关依赖，并实现对其的自动配置 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-		<!-- 引入 Spring Cloud Alibaba Nacos Discovery 相关依赖，将 Nacos 作为注册中心，并实现对其的自动配置 -->
-		<dependency>
-			<groupId>com.alibaba.cloud</groupId>
-			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-		</dependency>
-
-		<!-- 引入 Spring Cloud OpenFeign 相关依赖，使用 OpenFeign 提供声明式调用，并实现对其的自动配置 -->
+		<!-- Gateway 引入。一定不能引入web了 -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
+			<artifactId>spring-cloud-starter-gateway</artifactId>
 		</dependency>
 	</dependencies>
 	<build>

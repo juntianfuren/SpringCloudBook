@@ -1,4 +1,4 @@
-package com.jtfr.Chapter08_Feign_Hystrix_Consumer;
+package com.jtfr.Config_Bus_Consul_Server;
 
 /**
  * Hello world!

@@ -3,12 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.jtfr</groupId>
-	<artifactId>Chapter08-Feign-Hystrix-Consumer</artifactId>
+	<artifactId>Chapter08-Feign-Hystrix-Dashboard-Consumer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>Chapter08-Feign-Hystrix-Consumer</name>
-	<url>http://maven.apache.org</url>
+	<name>Chapter08-Feign-Hystrix-Dashboard-Consumer</name>
 
 	<properties>
 		<spring.boot.version>2.2.4.RELEASE</spring.boot.version>
@@ -61,6 +60,23 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+
+		<!-- 增加监控 Hystrix Dashboard -->
+		<!-- 实现对 Actuator 的自动化配置 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<!-- 加上监控，需要强制依赖hystrix，不清楚为什么Feign引入的不起作用了 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+		</dependency>
+		<!-- 实现对 Hystrix Dashboard 的自动配置 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
 		</dependency>
 	</dependencies>
 	<build>
